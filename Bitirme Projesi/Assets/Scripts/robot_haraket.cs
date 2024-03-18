@@ -18,16 +18,16 @@ public class robot_haraket : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         {
             transform.Translate(new Vector2(-1.0f, 0f) * robot_hizi * Time.deltaTime);
-            animator.SetBool("moving", true);
+            //animator.SetBool("moving", true);
         }
         if (Input.GetKey(KeyCode.D))
         {
             transform.Translate(new Vector2 (1.0f , 0f) * robot_hizi * Time.deltaTime);
-            animator.SetBool("moving", true);
+            //animator.SetBool("moving", true);
         }
         else
         {
-            animator.SetBool("moving", false);
+            //animator.SetBool("moving", false);
         }
     }
 }
