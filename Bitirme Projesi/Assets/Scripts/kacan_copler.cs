@@ -8,29 +8,33 @@ public class kacan_copler : MonoBehaviour
     public GameObject panel;
     public int toplamKacan;
     public TextMeshProUGUI kacanlar;
+    robot_haraket robotHareket;
+    cop_yoketme2 copYoketme2;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // Çarpışan nesnenin "yok edilebilir" etiketine sahip olup olmadığını kontrol edin
+        
         if (collision.gameObject.CompareTag("robot"))
         {
             //Destroy(collision.gameObject);
 
-            // Skoru güncelle
+            
             KacanGuncelle();
-            // Nesneyi yok edin
+            
 
         }
     }
     private void KacanGuncelle()
     {
-        // Skoru text nesnesinde göster
+        
         toplamKacan++;
         kacanlar.text = "" + toplamKacan;
     }
     // Start is called before the first frame update
     void Start()
     {
-        
+        robotHareket = FindObjectOfType<robot_haraket>();
+        copYoketme2 = FindObjectOfType<cop_yoketme2>();
     }
 
     // Update is called once per frame
@@ -39,7 +43,8 @@ public class kacan_copler : MonoBehaviour
         if (toplamKacan == 5)
         {
             panel.SetActive(true);
-            Time.timeScale = 0f;
+            robotHareket.hareketEt = false;
+            copYoketme2.copOlustur = false;
         }
         
     }

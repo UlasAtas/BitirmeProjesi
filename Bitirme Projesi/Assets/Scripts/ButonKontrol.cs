@@ -11,8 +11,8 @@ public class ButonKontrol : MonoBehaviour
     }
     public void TekrarBasla()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        Time.timeScale = 1.0f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        //Time.timeScale = 1.0f;
     }
 
 
