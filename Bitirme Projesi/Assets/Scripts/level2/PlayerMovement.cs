@@ -17,13 +17,20 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
-        
+        toplamSkor = 0;
+        skor.text = toplamSkor.ToString();
         rb = GetComponent<Rigidbody2D>();
         spawnPoint = cop.gameObject.transform;
     }
 
     void Update()
     {
+        if (toplamSkor > PlayerPrefs.GetInt("highScore2"))
+        {
+            PlayerPrefs.SetInt("highScore2", toplamSkor);
+        }
+
+
         //Debug.Log("5" + gameObject.transform.position);
         // Fare týklamasýný kontrol edin
         if (Input.GetMouseButtonDown(0))

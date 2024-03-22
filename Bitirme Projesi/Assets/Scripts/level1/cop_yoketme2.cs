@@ -7,8 +7,7 @@ public class cop_yoketme2 : MonoBehaviour
 {
     public int toplamSkor = 0;
     public bool copOlustur;
-
-    
+    public GameObject copKovası; 
     public TextMeshProUGUI skor;
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -25,7 +24,14 @@ public class cop_yoketme2 : MonoBehaviour
         }
     }
 
-    public GameObject copKovası;
+    private void Update()
+    {
+        if(toplamSkor > PlayerPrefs.GetInt("highScore"))
+        {
+            PlayerPrefs.SetInt("highScore", toplamSkor);
+        }
+        
+    }
 
     void ParcalariOlustur()
     {
@@ -43,6 +49,7 @@ public class cop_yoketme2 : MonoBehaviour
         
         parca.GetComponent<Rigidbody2D>().velocity = new Vector3(0, -hiz, 0);
     }
+
     void Start()
     {
         copOlustur = true;
@@ -51,6 +58,8 @@ public class cop_yoketme2 : MonoBehaviour
             InvokeRepeating("ParcalariOlustur", 1, 2);
 
         }
+        toplamSkor= 0;
+        skor.text = toplamSkor.ToString();
         //SkorGuncelle();
     }
 
@@ -58,7 +67,7 @@ public class cop_yoketme2 : MonoBehaviour
     {
         
         toplamSkor++;
-        skor.text = "" + toplamSkor;
+        skor.text = toplamSkor.ToString();
     }
 
 }
