@@ -19,6 +19,7 @@ public class MenuManager : MonoBehaviour
     public void StartOnClick()
     {
         SceneManager.LoadScene(1);
+        Time.timeScale = 1.0f;
     }
 
     public void OptionsOnClick()
