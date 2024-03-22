@@ -256,7 +256,7 @@ GameObject:
   - component: {fileID: 316942021}
   m_Layer: 0
   m_Name: level1collider
-  m_TagString: Untagged
+  m_TagString: level2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2689,7 +2689,7 @@ GameObject:
   - component: {fileID: 536937189}
   m_Layer: 0
   m_Name: level2collider
-  m_TagString: Untagged
+  m_TagString: level1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2769,7 +2769,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &656091456
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2809,7 +2809,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &668198901
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3894,6 +3894,7 @@ GameObject:
   - component: {fileID: 1388326452}
   - component: {fileID: 1388326451}
   - component: {fileID: 1388326453}
+  - component: {fileID: 1388326454}
   m_Layer: 0
   m_Name: robot_haraket_0
   m_TagString: Untagged
@@ -4075,6 +4076,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1388326454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1388326447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93da33ff8456a5844907c8de4c1af3fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paneller:
+  - {fileID: 668198900}
+  - {fileID: 656091455}
 --- !u!1 &1454028938
 GameObject:
   m_ObjectHideFlags: 0
