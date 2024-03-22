@@ -1356,9 +1356,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1036038633}
   - component: {fileID: 1036038632}
-  - component: {fileID: 1036038631}
   - component: {fileID: 1036038634}
   - component: {fileID: 1036038635}
+  - component: {fileID: 1036038636}
   m_Layer: 0
   m_Name: Oyuncu
   m_TagString: Untagged
@@ -1366,20 +1366,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1036038631
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1036038630}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98e333c14567fbd4193042f6c9ad3633, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  robot_hizi: 9.11
-  hareketEt: 0
 --- !u!212 &1036038632
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1514,6 +1500,21 @@ MonoBehaviour:
   copOlustur: 0
   "copKovas\u0131": {fileID: 7340647302923332633, guid: 6d2083b3fce3cc042bba8b5180996772, type: 3}
   skor: {fileID: 835270983}
+--- !u!114 &1036038636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1036038630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54e941d6a90587b4f9b209e1850cd329, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  robot_hizi: 3.55
+  hareketEt: 0
+  hareketSes: {fileID: 0}
 --- !u!1 &1155552786
 GameObject:
   m_ObjectHideFlags: 0
