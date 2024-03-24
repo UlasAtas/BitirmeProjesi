@@ -19,7 +19,7 @@ public class robot_haraket : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        //if (hareketEt)
+        if (hareketEt)
         {
             if (Input.GetKey(KeyCode.A))
             {

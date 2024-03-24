@@ -8,12 +8,12 @@ public class MenuManager : MonoBehaviour
 {
     
     public GameObject[] panels;
-    public Slider volumeSlider;
-    public AudioSource audioSource;
+    //public Slider volumeSlider;
+    //public AudioSource audioSource;
 
     private void Start()
     {
-        audioSource.volume = volumeSlider.value;
+        //audioSource.volume = volumeSlider.value;
     }
 
     public void StartOnClick()
@@ -40,8 +40,8 @@ public class MenuManager : MonoBehaviour
     }
 
 
-    public void VolumeSlider()
-    {
-        audioSource.volume = volumeSlider.value;
-    }
+    //public void VolumeSlider()
+    //{
+    //    audioSource.volume = volumeSlider.value;
+    //}
 }

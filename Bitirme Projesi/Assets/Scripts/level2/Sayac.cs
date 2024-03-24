@@ -5,6 +5,7 @@ using TMPro;
 
 public class Sayac : MonoBehaviour
 {
+    public TextMeshProUGUI text;
     public TextMeshProUGUI timerText;
     private float timeRemaining = 100f;
     private bool timerIsRunning = true;
@@ -14,8 +15,13 @@ public class Sayac : MonoBehaviour
     private void Start()
     {
         playerMovement = FindObjectOfType<PlayerMovement>();
+        Invoke("TextDestroy", 3);
     }
 
+    void TextDestroy()
+    {
+        Destroy(text);
+    }
 
     void Update()
     {

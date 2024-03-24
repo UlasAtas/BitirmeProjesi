@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class ButonKontrol : MonoBehaviour
 {
+    public TextMeshProUGUI text;
     public GameObject panel;
     public void Menu()
     {
@@ -15,6 +17,16 @@ public class ButonKontrol : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         //Time.timeScale = 1.0f;
+    }
+
+    void TextDestroy()
+    {
+        Destroy(text);
+    }
+
+    private void Start()
+    {
+        Invoke("TextDestroy", 3);
     }
 
     void Update()

@@ -9,26 +9,26 @@ public class PauseMenu : MonoBehaviour
 {
     bool isPaused;
     public GameObject[] panels;
-    public Slider volumeSlider;
-    public AudioSource audioSource;
-    public float musicVolume;
+    //public Slider volumeSlider;
+    //public AudioSource audioSource;
+    //public float musicVolume;
 
     // Start is called before the first frame update
     void Start()
     {
         isPaused = false;
 
-        if (!PlayerPrefs.HasKey("MusicVolume"))
-        {
-            musicVolume = volumeSlider.value;
-        }
-        else
-        {
-            musicVolume = PlayerPrefs.GetFloat("MusicVolume");
-        }
+        //if (!PlayerPrefs.HasKey("MusicVolume"))
+        //{
+        //    musicVolume = volumeSlider.value;
+        //}
+        //else
+        //{
+        //    musicVolume = PlayerPrefs.GetFloat("MusicVolume");
+        //}
 
-        audioSource.volume = musicVolume;
-        volumeSlider.value = musicVolume;
+        //audioSource.volume = musicVolume;
+        //volumeSlider.value = musicVolume;
     }
 
     private void Update()
@@ -37,12 +37,12 @@ public class PauseMenu : MonoBehaviour
     }
 
 
-    public void OnVolumeChange()
-    {
-        musicVolume = volumeSlider.value;
-        PlayerPrefs.SetFloat("MusicVolume", musicVolume);
-        audioSource.volume = musicVolume;
-    }
+    //public void OnVolumeChange()
+    //{
+    //    musicVolume = volumeSlider.value;
+    //    PlayerPrefs.SetFloat("MusicVolume", musicVolume);
+    //    audioSource.volume = musicVolume;
+    //}
 
     void Pause()
     {
